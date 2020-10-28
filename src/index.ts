@@ -1,10 +1,10 @@
 import Vue from "vue";
 import vueCustomElement from "vue-custom-element";
-import Button from "./button.vue";
+import CustomButton from "./custom-button.vue";
 
-Vue.config.ignoredElements = ["vce-button"];
+Vue.config.ignoredElements = ["custom-button"];
 Vue.use(vueCustomElement);
-Vue.customElement("vce-button", Button, {
+Vue.customElement("custom-button", CustomButton, {
   // shadowDOM化すると中のCSSが効かず、ここで指定したCSSが効く
   shadow: true,
   shadowCss: `
