@@ -1,12 +1,12 @@
 <template>
   <div>
-    <button>{{ text }} {{ message }}</button>
+    <input type="text" v-model="message" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "button",
+  name: "custom-text-field",
   props: {
     message: String,
   },
