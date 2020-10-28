@@ -2,11 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Custom Element By Vue</title>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
     <script src="dist/bundle.js"></script>
   </head>
   <body>
+    <div id="app">
+      {{ message }}
+    </div>
     <custom-button message="test"></custom-button>
     <custom-text-field message="test-text"></custom-text-field>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hello Vue!",
+        },
+      });
+    </script>
   </body>
 </html>
