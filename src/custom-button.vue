@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>{{ text }} {{ message }}</button>
+    <button>{{ label }}</button>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: "custom-button",
   props: {
-    message: String,
+    label: String,
   },
   data() {
     return {

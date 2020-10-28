@@ -9,15 +9,26 @@
   <body>
     <div id="app">
       {{ message }}
+      <custom-button :label="label" @click="click"></custom-button>
+      <custom-text-field
+        message="test-text"
+        v-model="textValue"
+      ></custom-text-field>
+      <p>{{ textValue }}</p>
     </div>
-    <custom-button message="test"></custom-button>
-    <custom-text-field message="test-text"></custom-text-field>
 
     <script>
       var app = new Vue({
         el: "#app",
         data: {
           message: "Hello Vue!",
+          textValue: "hoge",
+          label: "sample",
+        },
+        methods: {
+          click: function() {
+            alert("custom-button clicked!");
+          },
         },
       });
     </script>
