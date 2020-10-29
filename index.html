@@ -3,27 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <title>My first Vue app</title>
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="dist/bundle.js"></script>
   </head>
   <body>
     <div id="app">
-      {{ message }}
       <custom-button :label="label" @click="click"></custom-button>
+      <!-- v-model="textValue" だとバインドできない不具合が解消できないため以下の等価実装で回避 -->
       <custom-text-field
-        message="test-text"
-        v-model="textValue"
+        :value="textValue"
+        @input="e => textValue = e.target.value"
       ></custom-text-field>
-      <p>{{ textValue }}</p>
+      <p>value: {{ textValue }}</p>
     </div>
 
     <script>
       var app = new Vue({
         el: "#app",
-        data: {
-          message: "Hello Vue!",
-          textValue: "hoge",
-          label: "sample",
+        data() {
+          return {
+            label: "button",
+            textValue: "",
+          };
         },
         methods: {
           click: function() {

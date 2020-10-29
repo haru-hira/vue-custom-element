@@ -1,21 +1,23 @@
 <template>
   <div>
-    <input type="text" v-model="message" />
+    <input type="text" v-model="innerValue" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "custom-text-field",
   props: {
-    message: String,
+    value: String,
   },
-  data() {
-    return {
-      text: "button",
-    };
+  computed: {
+    innerValue: {
+      get() {
+        return this.value;
+      },
+      set(val) {
+        this.$emit("input", val);
+      },
+    },
   },
 };
 </script>
-
-<style></style>
