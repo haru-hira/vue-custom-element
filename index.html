@@ -13,8 +13,10 @@
       <custom-text-field
         :value="textValue"
         @input="e => textValue = e.target.value"
+        @valid="e => textValid = e.detail[0]"
       ></custom-text-field>
       <p>value: {{ textValue }}</p>
+      <p>valid: {{ textValid }}</p>
     </div>
 
     <script>
@@ -24,6 +26,7 @@
           return {
             label: "button",
             textValue: "",
+            textValid: false,
           };
         },
         methods: {

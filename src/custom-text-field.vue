@@ -16,6 +16,7 @@ export default {
       },
       set(val) {
         this.$emit("input", val);
+        this.$emit("valid", val && val.length <= 5 ? true : false);
       },
     },
   },
