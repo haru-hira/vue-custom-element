@@ -1,5 +1,6 @@
 <template>
   <div>
+    <slot name="header"></slot>
     <input type="text" v-model="innerValue" />
   </div>
 </template>

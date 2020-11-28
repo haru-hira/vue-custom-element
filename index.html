@@ -14,7 +14,11 @@
         :value="textValue"
         @input="e => textValue = e.target.value"
         @valid="e => textValid = e.detail[0]"
-      ></custom-text-field>
+      >
+        <template slot id="header">
+          <p>Hello World!</p>
+        </template>
+      </custom-text-field>
       <p>value: {{ textValue }}</p>
       <p>valid: {{ textValid }}</p>
     </div>
