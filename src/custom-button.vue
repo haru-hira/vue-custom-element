@@ -1,5 +1,6 @@
 <template>
   <div>
+    <slot name="header"></slot>
     <button>{{ label }}</button>
   </div>
 </template>
