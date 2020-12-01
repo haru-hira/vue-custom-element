@@ -2,6 +2,7 @@
   <div>
     <slot name="header"></slot>
     <button>{{ label }}</button>
+    <slot name="footer"></slot>
   </div>
 </template>
 

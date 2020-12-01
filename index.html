@@ -10,7 +10,10 @@
     <div id="app">
       <custom-button :label="label" @click="click">
         <template slot id="header">
-          <p>1.</p>
+          <p>1. header</p>
+        </template>
+        <template slot id="footer">
+          <p>1. footer</p>
         </template>
       </custom-button>
       <!-- v-model="textValue" だとバインドできない不具合が解消できないため以下の等価実装で回避 -->
