@@ -9,10 +9,10 @@
   <body>
     <div id="app">
       <custom-button :label="label" @click="click">
-        <template slot id="header">
+        <template v-slot:header>
           <p>1. header</p>
         </template>
-        <template slot id="footer">
+        <template v-slot:footer>
           <p>1. footer</p>
         </template>
       </custom-button>
