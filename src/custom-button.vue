@@ -1,8 +1,8 @@
 <template>
   <div>
-    <slot name="header"></slot>
+    <slot><p>[header]</p></slot>
     <button>{{ label }}</button>
-    <slot name="footer"></slot>
+    <slot><p>[footer]</p></slot>
   </div>
 </template>
 
